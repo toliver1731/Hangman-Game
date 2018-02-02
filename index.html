@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Age Hangman</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/sandstone/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Monoton" rel="stylesheet">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container ">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+						<div class="game-title panel-heading"><h1>Hangman</h1></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container main-content">
+
+				<div class="row">
+
+				<!-- Left Column -->
+					<div class="col-md-3">
+
+					<!-- Category Selection -->
+						<div class="panel panel-primary">
+						  	<div class="short3 panel-heading">
+						  		<h4>Category</h4>
+						  	</div>
+					  		<div class="short panel-body" >
+					  			<div class="form-group">
+								  <label for="Category">Select Category:</label>
+								  <select class="form-control" id="category">
+								    <option>NFL Teams</option>
+								    <!-- <option>MLB Teams</option>
+								    <option>NBA Teams</option> -->
+								  </select>
+								  
+								</div>
+							</div>
+					  	</div>
+
+					<!-- Team Logo -->
+					  	<div class="panel panel-primary">
+					  		<div class="short3 panel-heading">
+					  			<h4>Team Logo</h4>
+					  		</div>
+					  		<div class= short2 panel-body" id = "logoSection">
+					  			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiPL-bxWonw1J8XuGNCu3AtG4zfDffi2owmFQ4BOGN86swxiVh"  id = "logo" height = "90%" width = "90%">
+					  		</div>
+						</div>	
+
+					</div>
+
+
+				<!-- Hangman on Canvas -->
+					<div class="hangman col-md-6">
+						<div class="panel panel-primary">
+						  <div class="tall panel-body">	
+						  	<canvas id = "myCanvas"></canvas>	
+						  	<div id="hold">
+								
+							</div>					  			 
+						  </div>
+						</div>
+					</div>
+
+				<!-- Right Column -->
+					<div class=" col-md-3">
+
+					<!-- Score -->
+						<div class="panel panel-primary">
+						  	<div class="short3 panel-heading">
+						  		<h4>Score</h4>
+							</div>
+							<div class="score panel-body">
+							  	<div class="row">
+								  	<div class="winColumn col-md-6 col-sm-6  col-xs-6">
+								  		<div class="scoreName"><h5>Wins</h5></div>
+								  		<div id="win"></div>
+								  	</div>
+								  	<div class="lossColumn col-md-6 col-sm-6 col-xs-6">
+									  	<div class="scoreName"><h5>Losses</h5></div>
+									  	<div id="loss"></div>
+								  	</div>							
+								</div>
+					  		</div>
+						</div>
+
+					<!-- Hint -->
+						<div class="panel panel-primary">
+						  <div class="short3 panel-heading">
+						  	<h4>Hint   <span style= "color:#EDF86E; font-style: bold"> (Lose a life!!)</span></h4>
+						  </div>
+						  <div class="box-hint short panel-body">
+						  	<button class="btn-hint btn btn-info" id="btnHint"><h4>Hint</h4></button>
+							<div class = "hint" id="clue" >Give me a hint</div>
+						  </div>
+						</div>
+
+					<!-- Lives -->
+						<div class="panel panel-primary">
+						  <div class="short3 panel-heading">
+						  	<h4>Lives</h4>
+						  </div>
+						  <div class="box-hint short panel-body">
+							<div class = "box-lives">You have <span id = "myLives"></span>
+							<br> lives remaining!</div>
+						  </div>
+						</div>
+
+					</div>	
+
+				</div>
+
+			<!-- Alphabet List -->
+				<div class="row">
+					<div class=" col-md-12">
+						<div class="panel panel-primary">
+							<div class=" alpha panel-heading">
+							  	<h3>Use the alphabet below to guess the word!</h3>
+							</div>
+							<div class="short2 panel-body" id="buttons">
+								
+							  	<div id="letters">
+							  		
+							  	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<!-- Win Loss Comment Popup -->
+	<div id="popup">
+		<span class="popuptext" id="myPopup"></span>
+			<div id="winLossComment">Test</div>
+			<div id="buttons">
+				<!-- <button class= "btn btn-info" id="newGame">New Game</button> -->
+				<button class= "btn btn-info" id="reset">Reset</button>
+			</div>
+	</div>
+
+	
+
+
+</body>
+</html>
